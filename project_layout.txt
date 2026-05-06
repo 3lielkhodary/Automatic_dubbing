@@ -1,0 +1,22 @@
+video-dubber/
+│
+├── dubber/                  ← installable package
+│   ├── __init__.py          ← public API: Pipeline, DubbingResult
+│   ├── pipeline.py          ← orchestrates all 5 steps
+│   ├── models.py            ← DubbingResult dataclass
+│   ├── cli.py               ← argparse CLI (video-dubber command)
+│   │
+│   ├── core/                ← one class per pipeline step
+│   │   ├── extractor.py     ← Step 1: ffmpeg → WAV
+│   │   ├── transcriber.py   ← Step 2: Google STT, chunked
+│   │   ├── translator.py    ← Step 3: Google Translate, batched
+│   │   ├── synthesiser.py   ← Step 4: gTTS + tempo + loudness match
+│   │   └── merger.py        ← Step 5: ffmpeg stream copy
+│   │
+│   └── utils/language.py    ← BCP-47 / ISO code normalisation
+│
+├── config/settings.py       ← all constants, env-var overrides
+├── tests/                   ← 17 unit tests with mocks
+├── scripts/dub_video.py     ← run without pip install
+├── setup.py                 ← pip install -e .
+└── requirements.txt

@@ -1,0 +1,7 @@
+.\dubbing_env\Scripts\Activate.ps1
+
+python -m dubber.cli
+
+python -m dubber.cli islam.mp4 --target ar --output dubbed_islam.mp4    
+python -m dubber.cli test.mp4 --target ar --output dubbed_test.mp4    
+python -m dubber.cli podcast.mp4 --target ar --output dubbed_podcast.mp4    
