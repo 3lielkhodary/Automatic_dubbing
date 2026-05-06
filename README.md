@@ -164,19 +164,7 @@ All defaults live in `config/settings.py` and can be overridden with environment
 | `DUBBER_TEMPO_MIN` | `0.6` | Minimum tempo multiplier |
 | `DUBBER_TEMPO_MAX` | `2.0` | Maximum tempo multiplier |
 
----
 
-## Whisper model sizes
-
-| Model | VRAM | Speed | Accuracy |
-|---|---|---|---|
-| tiny | ~1 GB | fastest | lowest |
-| base | ~1 GB | fast | good ← default |
-| small | ~2 GB | medium | better |
-| medium | ~5 GB | slow | high |
-| large | ~10 GB | slowest | best |
-
----
 
 ## XTTS-v2 supported languages
 
